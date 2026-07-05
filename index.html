@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Jam Izin Zia Togel - Luxury Casino Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght=600;700;900&family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(rgba(10, 5, 5, 0.9), rgba(20, 10, 10, 0.95)), 
+                        url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .casino-title {
+            font-family: 'Cinzel', serif;
+            text-shadow: 0 0 10px rgba(218, 165, 32, 0.6), 0 0 20px rgba(218, 165, 32, 0.4);
+        }
+
+        .gold-border-premium {
+            border: 2px solid transparent;
+            background-image: linear-gradient(rgba(26, 12, 12, 0.95), rgba(44, 15, 20, 0.98)), linear-gradient(135deg, #ffe066 0%, #d4af37 40%, #aa7c11 60%, #fff3a8 100%);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.15), 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .velvet-card {
+            background: linear-gradient(135deg, #4a0e17 0%, #2b060c 50%, #1a0307 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: inset 0 0 12px rgba(212, 175, 55, 0.2);
+        }
+
+        .cyan-glow-text {
+            color: #00f0ff;
+            text-shadow: 0 0 12px rgba(0, 240, 255, 0.8), 0 0 25px rgba(0, 240, 255, 0.4);
+        }
+
+        .red-glow-text {
+            color: #ff3344;
+            text-shadow: 0 0 12px rgba(255, 51, 68, 0.8), 0 0 25px rgba(255, 51, 68, 0.4);
+        }
+
+        .hazard-pulse-row {
+            background: linear-gradient(90deg, rgba(140, 10, 25, 0.4) 0%, rgba(26, 12, 12, 0.95) 100%) !important;
+            border-left: 5px solid #f43f5e !important;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a0307;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="text-stone-100 min-h-screen p-4 md:p-6 flex flex-col justify-between">
+
+    <div class="max-w-7xl mx-auto w-full space-y-6">
+        
+        <header class="gold-border-premium rounded-2xl p-4 md:p-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4">
+                <div class="bg-gradient-to-br from-amber-400 to-yellow-700 p-3 rounded-xl shadow-lg ring-1 ring-yellow-300/30">
+                    <i class="fa-solid fa-crown text-2xl text-stone-950"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-black tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-yellow-100 to-amber-500 uppercase casino-title">
+                        DASHBOARD JAM IZIN ZIA TOGEL
+                    </h1>
+                    <p class="text-xs font-bold text-amber-400/80 tracking-widest uppercase mt-0.5"><i class="fa-solid fa-dice-five mr-1"></i> VIP OFFLINE CASINO SYSTEM</p>
+                </div>
+            </div>
+            
+            <div class="text-center md:text-right bg-black/40 px-6 py-2.5 rounded-xl border border-amber-500/20">
+                <div id="clock" class="text-3xl md:text-4xl font-black tracking-widest bg-clip-text text-transparent bg-gradient-to-b from-yellow-200 to-amber-400 font-mono">00:00:00</div>
+                <div id="date" class="text-xs font-bold text-amber-400/60 tracking-wider mt-1 uppercase">Senin, 15 Juni 2026</div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="velvet-card rounded-xl p-5 flex items-center justify-between">
+                <div>
+                    <p class="text-xs font-bold text-amber-400/70 uppercase tracking-widest">TOTAL STAFF KPS</p>
+                    <h3 id="totalKaryawan" class="text-4xl font-black mt-1 text-white tracking-tight">32</h3>
+                </div>
+                <div class="p-4 bg-black/30 rounded-xl border border-amber-500/10 text-amber-400"><i class="fa-solid fa-users-viewfinder text-2xl"></i></div>
+            </div>
+            
+            <div class="velvet-card rounded-xl p-5 flex items-center justify-between border-l-4 border-cyan-500">
+                <div>
+                    <p class="text-xs font-bold text-cyan-400 uppercase tracking-widest">SEDANG IJIN</p>
+                    <h3 id="diToilet" class="text-4xl font-black mt-1 text-cyan-400 cyan-glow-text">0</h3>
+                </div>
+                <div class="p-4 bg-cyan-950/30 border border-cyan-500/20 rounded-xl text-cyan-400"><i class="fa-solid fa-door-open text-2xl"></i></div>
+            </div>
+
+            <div id="boxLewatDurasi" class="velvet-card rounded-xl p-5 flex items-center justify-between border-l-4 border-stone-700 transition-all duration-300">
+                <div>
+                    <p class="text-xs font-bold text-rose-400 uppercase tracking-widest">LEWAT DURASI (&gt;15 MNT)</p>
+                    <h3 id="lewatDurasi" class="text-4xl font-black mt-1 text-rose-500">0</h3>
+                </div>
+                <div id="iconLewatDurasi" class="p-4 bg-black/30 rounded-xl text-stone-500 transition-colors"><i class="fa-solid fa-triangle-exclamation text-2xl"></i></div>
+            </div>
+        </div>
+
+        <div class="velvet-card rounded-xl p-6 shadow-2xl border border-amber-500/20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-end">
+                
+                <div>
+                    <label class="block text-xs font-bold text-amber-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-user-tie mr-1"></i> Pilih Nama Staff (Saat Mau Keluar)</label>
+                    <div class="relative">
+                        <select id="selectNama" class="w-full bg-stone-900/90 border border-amber-500/30 text-stone-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-400 font-medium appearance-none cursor-pointer">
+                            <option value="">-- Silakan Pilih Nama Staff --</option>
+                            <option value="KENDRICK TANRIO">KENDRICK TANRIO - X131881</option>
+                            <option value="ZIDAN FEBRIANSYAH">ZIDAN FEBRIANSYAH - C025651</option>
+                            <option value="FAHMI RIZKI SABTOMI">FAHMI RIZKI SABTOMI - E0311971</option>
+                            <option value="MUHAMMAD VALHANS LUBIS">MUHAMMAD VALHANS LUBIS - C6039911</option>
+                            <option value="MUHAMMAD FIKRAM DEWALDO">MUHAMMAD FIKRAM DEWALDO - X8318440</option>
+                            <option value="HOSEA LEGI">HOSEA LEGI - C8045072</option>
+                            <option value="NOPIYANTO">NOPIYANTO - E4485513</option>
+                            <option value="VINNA">VINNA - E2372975</option>
+                            <option value="SWENDY">SWENDY - C6797317</option>
+                            <option value="JUNAIDY KELVIN">JUNAIDY KELVIN - C8356199</option>
+                            <option value="CARISSA AGNESIA WIJAYA">CARISSA AGNESIA WIJAYA - E5381421</option>
+                            <option value="VIKI DWI PRATAMA">VIKI DWI PRATAMA - E1944595</option>
+                            <option value="ANJU RAWINA">ANJU RAWINA - E1243462</option>
+                            <option value="FAZIRA NAZWA FITRI LUBIS">FAZIRA NAZWA FITRI LUBIS - E3262813</option>
+                            <option value="MUHAMMAD YASIR">MUHAMMAD YASIR - X7096487</option>
+                            <option value="SYARIFAH">SYARIFAH - E1228020</option>
+                            <option value="MUHAMMAD IDRIS">MUHAMMAD IDRIS - E5048127</option>
+                            <option value="SET FERNANDO SINURAYA">SET FERNANDO SINURAYA - E004855</option>
+                            <option value="NICO ANDREAS SIANIPAR">NICO ANDREAS SIANIPAR - E780277</option>
+                            <option value="GUNTUR ERZAN SYAHPUTRA">GUNTUR ERZAN SYAHPUTRA - E2881</option>
+                            <option value="WIKNES PREN">WIKNES PREN - E6030891</option>
+                            <option value="MUHAMMAD SALEH">MUHAMMAD SALEH - F6973024</option>
+                            <option value="RAHMAD EFENDI SIREGAR">RAHMAD EFENDI SIREGAR - E849317</option>
+                            <option value="SALSA ADILA SYAFIRA">SALSA ADILA SYAFIRA - X4779111</option>
+                            <option value="DELVIC GOLDSTEIN">DELVIC GOLDSTEIN - E4558911</option>
+                            <option value="WIKNES SUREN">WIKNES SUREN - X7110749</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-amber-400">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-amber-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-circle-info mr-1"></i> Pilih STATUS IJIN</label>
+                    <div class="relative">
+                        <select id="selectStatusIjin" class="w-full bg-stone-900/90 border border-amber-500/30 text-stone-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-400 font-medium appearance-none cursor-pointer">
+                            <option value="Izin Toilet">Izin Toilet (Maks 15 Menit)</option>
+                            <option value="Izin Ambil Makan">Izin Ambil Makan</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-amber-400">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-amber-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-briefcase mr-1"></i> Pilih JOBDESK / ROLE</label>
+                    <div class="relative">
+                        <select id="selectJobdesk" class="w-full bg-stone-900/90 border border-amber-500/30 text-stone-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-400 font-medium appearance-none cursor-pointer">
+                            <option value="KASIR">KASIR</option>
+                            <option value="CS">CS</option>
+                            <option value="Kapten">KAPTEN </option>
+                            
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-amber-400">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-amber-500/10 flex gap-4">
+                <button onclick="prosesMulaiIzin()" class="w-full p-4 rounded-xl bg-gradient-to-b from-emerald-500 to-green-700 hover:from-emerald-400 hover:to-green-600 border border-emerald-400/30 text-white font-black tracking-wider text-sm shadow-lg flex items-center justify-center gap-2 transition-all active:scale-[0.99]">
+                    <i class="fa-solid fa-play-circle text-lg"></i> MULAI JAM IZIN (STAFF KELUAR)
+                </button>
+                <button onclick="bersihkanSemuaDataLog()" class="px-5 rounded-xl bg-stone-900 hover:bg-stone-800 border border-amber-500/20 text-rose-400 text-xs font-bold flex items-center gap-2 transition-all">
+                    <i class="fa-solid fa-trash-can"></i> RESET DATA
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-amber-950/80 via-black/80 to-amber-950/80 rounded-xl py-3 px-6 border border-amber-500/30 flex items-center justify-center gap-2 shadow-inner">
+            <i class="fa-solid fa-stopwatch text-amber-400 animate-spin" style="animation-duration: 3s;"></i>
+            <span class="text-xs font-black uppercase tracking-widest text-amber-300">SISTEM MEMORI PERMANEN AKTIF - LIVE COUTDOWN DIGITAL JAM BESAR AKTIF</span>
+        </div>
+
+        <div class="gold-border-premium rounded-xl overflow-hidden shadow-2xl">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gradient-to-r from-amber-950 to-stone-950 border-b border-amber-500/30 text-amber-300 text-xs font-extrabold uppercase tracking-wider">
+                            <th class="py-4 px-6">Nama Staff</th>
+                            <th class="py-4 px-6 text-center">Status Ijin</th>
+                            <th class="py-4 px-6">Jobdesk</th>
+                            <th class="py-4 px-6">Jam Keluar</th>
+                            <th class="py-4 px-6">Jam Kembali</th>
+                            <th class="py-4 px-6 text-center">Status Aktivitas / Aksi</th>
+                            <th class="py-4 px-6 text-center" style="width: 180px;">Sisa Waktu (Live)</th>
+                            <th class="py-4 px-6">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody" class="divide-y divide-amber-900/20 font-medium text-sm bg-stone-950/40">
+                        </tbody>
+                </table>
+            </div>
+            
+            <div id="emptyState" class="py-14 text-center text-amber-600/50 text-sm bg-stone-950/60">
+                <i class="fa-solid fa-ring block text-3xl mb-3 text-amber-600/30"></i>
+                Belum ada aktivitas ijin staff yang tercatat saat ini. Meja Operasional Standby Penuh!
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="text-center text-xs text-amber-500/40 mt-8 tracking-widest font-mono py-4">
+        &copy; 2026 ZIA TOGEL SYSTEM INC. ALL RIGHTS RESERVED. VIP CASINO MONITORING SUITE.
+    </footer>
+
+    <script>
+        let dataLog = JSON.parse(localStorage.getItem("ziaTogelDataLog")) || [];
+        const TOTAL_STAFF_KPS = 32; 
+
+        function simpanKeMemoriLokal() {
+            localStorage.setItem("ziaTogelDataLog", JSON.stringify(dataLog));
+        }
+
+        // 1. CLOCK UTAMA SYSTEM
+        function updateClock() {
+            const now = new Date();
+            let hours = String(now.getHours()).padStart(2, '0');
+            let minutes = String(now.getMinutes()).padStart(2, '0');
+            let seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById("clock").innerText = `${hours}:${minutes}:${seconds}`;
+
+            const opsiTanggal = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById("date").innerText = now.toLocaleDateString('id-ID', opsiTanggal);
+
+            updateLiveDurations();
+        }
+
+        // 2. PROSES DAFTAR KELUAR
+        function prosesMulaiIzin() {
+            const selectNama = document.getElementById("selectNama");
+            const selectStatusIjin = document.getElementById("selectStatusIjin");
+            const selectJobdesk = document.getElementById("selectJobdesk");
+
+            const namaTerpilih = selectNama.value;
+            if (!namaTerpilih) {
+                alert("Pemberitahuan: Silakan tentukan Nama Staff terlebih dahulu sebelum keluar!");
+                return;
+            }
+
+            const sudahIjin = dataLog.some(item => item.nama === namaTerpilih && item.statusAktivitas === "Di Toilet");
+            if (sudahIjin) {
+                alert(`Peringatan: Staff ${namaTerpilih} saat ini sedang berada di luar!`);
+                return;
+            }
+
+            const sekarang = new Date();
+            const jamKeluarStr = sekarang.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+            const itemLogBaru = {
+                id: Date.now(), 
+                nama: namaTerpilih,
+                statusIjin: selectStatusIjin.value,
+                jobdesk: selectJobdesk.value,
+                jamKeluar: jamKeluarStr,
+                jamKembali: '-',
+                statusAktivitas: 'Di Toilet',
+                waktuMulai: ClinicalTime = sekarang.getTime(), 
+                sisaDetik: 900, 
+                keterangan: 'Sedang Di Luar'
+            };
+
+            dataLog.unshift(itemLogBaru);
+            simpanKeMemoriLokal();
+            selectNama.value = ""; 
+            renderDashboardTable();
+        }
+
+        // 3. PROSES KEMBALI MASUK & LOG TOTAL DURASI
+        function prosesKembaliLangsung(idLog) {
+            const dataAktif = dataLog.find(item => item.id === idLog);
+            
+            if (!dataAktif) return;
+
+            const sekarang = new Date();
+            const jamKembaliStr = sekarang.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+            const totalDetikKeluar = Math.floor((sekarang.getTime() - dataAktif.waktuMulai) / 1000);
+            const durasiMenit = String(Math.floor(totalDetikKeluar / 60)).padStart(2, '0');
+            const durasiDetik = String(totalDetikKeluar % 60).padStart(2, '0');
+            const teksDurasiTotal = `${durasiMenit} Menit ${durasiDetik} Detik`;
+
+            dataAktif.jamKembali = jamKembaliStr;
+            dataAktif.statusAktivitas = 'Kembali';
+
+            if (dataAktif.sisaDetik < 0) {
+                dataAktif.keterangan = `Selesai (${teksDurasiTotal}) - Terlambat`;
+            } else {
+                dataAktif.keterangan = `Selesai (${teksDurasiTotal})`;
+            }
+
+            simpanKeMemoriLokal();
+            renderDashboardTable();
+        }
+
+        // 4. UPDATE HITUNGAN LIVE COUNTDOWN
+        function updateLiveDurations() {
+            let pemicuRender = false;
+
+            dataLog.forEach(item => {
+                if (item.statusAktivitas === 'Di Toilet') {
+                    const sekarang = new Date().getTime();
+                    const detikBerjalan = Math.floor((sekarang - item.waktuMulai) / 1000);
+                    item.sisaDetik = 900 - detikBerjalan;
+                    pemicuRender = true;
+                }
+            });
+
+            if (pemicuRender) {
+                renderDashboardTable(false); 
+            }
+        }
+
+        // 5. RENDER REFRESH VIEW TABEL (DENGAN JAM DISPLAY BESAR DI KOLOM SISA WAKTU)
+        function renderDashboardTable(hitungUlangCounter = true) {
+            const tbody = document.getElementById("tableBody");
+            const emptyState = document.getElementById("emptyState");
+            tbody.innerHTML = "";
+
+            if (dataLog.length === 0) {
+                emptyState.classList.remove("hidden");
+            } else {
+                emptyState.classList.add("hidden");
+            }
+
+            dataLog.forEach(item => {
+                const nilaiAbsolutDetik = Math.abs(item.sisaDetik);
+                const formatMenit = String(Math.floor(nilaiAbsolutDetik / 60)).padStart(2, '0');
+                const formatDetik = String(nilaiAbsolutDetik % 60).padStart(2, '0');
+                
+                const tandaMinus = item.sisaDetik < 0 ? "-" : "";
+                const displaySisaWaktu = `${tandaMinus}${formatMenit}:${formatDetik}`;
+
+                let statusCellContent = "";
+                let teksKeteranganStyle = 'text-stone-400';
+                let rowBackgroundStyle = '';
+                let htmlSisaWaktuBesar = "";
+
+                // JIKA STAF SEDANG DI LUAR / TOILET (BUAT BOX JAM BESAR LIVE)
+                if (item.statusAktivitas === 'Di Toilet') {
+                    if (item.sisaDetik < 0) {
+                        teksKeteranganStyle = 'text-rose-400 font-black animate-pulse';
+                        rowBackgroundStyle = 'hazard-pulse-row';
+                        item.keterangan = 'Lewat Batas!';
+                        
+                        // Style Box Merah Besar jika Terlambat
+                        htmlSisaWaktuBesar = `
+                            <div class="bg-red-950/80 border-2 border-rose-600 px-3 py-1.5 rounded-xl shadow-lg inline-block min-w-[120px]">
+                                <span class="text-xl md:text-2xl font-black font-mono tracking-widest red-glow-text">${displaySisaWaktu}</span>
+                            </div>
+                        `;
+                    } else {
+                        item.keterangan = 'Sedang Di Luar';
+                        
+                        // Style Box Neon Cyan Besar saat Waktu Berjalan Aman
+                        htmlSisaWaktuBesar = `
+                            <div class="bg-stone-900 border border-cyan-500/50 px-3 py-1.5 rounded-xl shadow-lg inline-block min-w-[120px]">
+                                <span class="text-xl md:text-2xl font-black font-mono tracking-widest cyan-glow-text">${displaySisaWaktu}</span>
+                            </div>
+                        `;
+                    }
+
+                    statusCellContent = `
+                        <button onclick="prosesKembaliLangsung(${item.id})" class="px-3 py-1.5 rounded-lg bg-gradient-to-b from-rose-600 to-red-700 hover:from-rose-500 hover:to-red-600 text-white font-extrabold text-xs tracking-wide shadow border border-red-400/20 flex items-center gap-1 mx-auto transition-transform active:scale-95">
+                            <i class="fa-solid fa-circle-check"></i> KEMBALI BEKERJA
+                        </button>
+                    `;
+                } else {
+                    // TAMPILAN JIKA SUDAH KEMBALI (JAM SISA DIKECILKAN / DICORET COLD)
+                    if (item.keterangan.includes("Terlambat")) {
+                        teksKeteranganStyle = 'text-amber-500 font-semibold';
+                    } else {
+                        teksKeteranganStyle = 'text-emerald-400 font-semibold';
+                    }
+                    
+                    htmlSisaWaktuBesar = `
+                        <span class="text-sm font-mono font-bold text-stone-600 line-through">${displaySisaWaktu}</span>
+                    `;
+                    
+                    statusCellContent = `
+                        <span class="px-3 py-1 rounded-full text-xs font-black tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase">
+                            <i class="fa-solid fa-user-check mr-1"></i> KEMBALI
+                        </span>
+                    `;
+                }
+
+                const tr = document.createElement("tr");
+                tr.className = `hover:bg-amber-950/10 transition-colors border-b border-amber-900/10 ${rowBackgroundStyle}`;
+                tr.innerHTML = `
+                    <td class="py-3.5 px-6 text-stone-100 font-bold tracking-wide">${item.nama}</td>
+                    <td class="py-3.5 px-6 text-center text-amber-400/90 font-semibold">${item.statusIjin}</td>
+                    <td class="py-3.5 px-6 text-amber-100/70 font-medium">${item.jobdesk}</td>
+                    <td class="py-3.5 px-6 text-stone-400 font-mono text-xs">${item.jamKeluar}</td>
+                    <td class="py-3.5 px-6 text-stone-400 font-mono text-xs">${item.jamKembali}</td>
+                    <td class="py-3.5 px-6 text-center">${statusCellContent}</td>
+                    <td class="py-2 px-6 text-center">${htmlSisaWaktuBesar}</td>
+                    <td class="py-3.5 px-6 text-xs ${teksKeteranganStyle}">${item.keterangan}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            if (hitungUlangCounter) {
+                hitungUlangStatistikDashboard();
+            }
+        }
+
+        // 6. SYNC DATA STATISTIK PANEL ATAS
+        function hitungUlangStatistikDashboard() {
+            const jumlahSedangIjin = dataLog.filter(item => item.statusAktivitas === 'Di Toilet').length;
+            const jumlahLewatDurasi = dataLog.filter(item => item.statusAktivitas === 'Di Toilet' && item.sisaDetik < 0).length;
+
+            document.getElementById("totalKaryawan").innerText = TOTAL_STAFF_KPS;
+            document.getElementById("diToilet").innerText = jumlahSedangIjin;
+            document.getElementById("lewatDurasi").innerText = jumlahLewatDurasi;
+
+            const boxLewat = document.getElementById("boxLewatDurasi");
+            const iconLewat = document.getElementById("iconLewatDurasi");
+
+            if (jumlahLewatDurasi > 0) {
+                boxLewat.className = "velvet-card rounded-xl p-5 flex items-center justify-between border-l-4 border-rose-600 bg-gradient-to-r from-red-950/40 to-stone-950 shadow-2xl animate-pulse";
+                iconLewat.className = "p-4 bg-rose-900/40 border border-rose-500/30 rounded-xl text-rose-400";
+            } else {
+                boxLewat.className = "velvet-card rounded-xl p-5 flex items-center justify-between border-l-4 border-stone-700 transition-all duration-300";
+                iconLewat.className = "p-4 bg-black/30 rounded-xl text-stone-500";
+            }
+        }
+
+        // Reset Data Shift
+        function bersihkanSemuaDataLog() {
+            if(confirm("Apakah Anda yakin ingin menghapus bersih seluruh riwayat log data izin hari ini?")) {
+                dataLog = [];
+                localStorage.removeItem("ziaTogelDataLog");
+                renderDashboardTable();
+            }
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+        renderDashboardTable();
+    </script>
+</body>
+</html>
